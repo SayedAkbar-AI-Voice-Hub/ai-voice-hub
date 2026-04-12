@@ -8,7 +8,13 @@ export default function Footer() {
   const col2 = services.slice(6)
 
   return (
-    <footer style={{ background: 'linear-gradient(135deg, #1A0A3C 0%, #0F0620 50%, #0A1840 100%)' }} className="rounded-t-[3rem] mt-0">
+    <footer
+      style={{
+        background: 'linear-gradient(160deg, #07030F 0%, #050210 60%, #060A16 100%)',
+        borderTop: '1px solid rgba(123,97,255,0.18)',
+      }}
+      className="rounded-t-[3rem] mt-0 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 

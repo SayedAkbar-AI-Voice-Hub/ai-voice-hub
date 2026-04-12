@@ -81,7 +81,7 @@ export default function Pricing() {
       id="pricing"
       ref={ref}
       className="py-32 px-6 relative overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #1A0A3C 0%, #0F0620 50%, #0A1840 100%)' }}
+      style={{ background: 'linear-gradient(160deg, #1E0E48 0%, #16093A 50%, #0E1848 100%)' }}
     >
       {/* Background glows */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full pointer-events-none"
