@@ -80,19 +80,26 @@ export default function Pricing() {
     <section
       id="pricing"
       ref={ref}
-      className="py-32 px-6"
-      style={{ background: '#F5F0E8' }}
+      className="py-32 px-6 relative overflow-hidden"
+      style={{ background: 'linear-gradient(135deg, #1A0A3C 0%, #0F0620 50%, #0A1840 100%)' }}
     >
-      <div className="max-w-5xl mx-auto">
+      {/* Background glows */}
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse, rgba(123,97,255,0.18) 0%, transparent 70%)' }} />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 65%)' }} />
+
+      <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2
-            className="text-5xl md:text-6xl font-bold mb-4 leading-tight"
-            style={{ fontStyle: 'italic', color: '#1a1208', letterSpacing: '-0.02em' }}
-          >
-            Scale without constraints.
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-white/70 text-sm font-medium mb-6">
+            Membership Tiers
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight tracking-tight">
+            Scale without{' '}
+            <span className="drama-text gradient-text">constraints.</span>
           </h2>
-          <p className="text-gray-500 text-sm">
+          <p className="text-white/40 text-sm mono-text">
             $300 Initial Configuration + simple monthly consumption.
           </p>
         </div>
@@ -102,54 +109,41 @@ export default function Pricing() {
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`pricing-card relative rounded-3xl p-8 flex flex-col ${
+              className={`pricing-card relative rounded-3xl p-8 flex flex-col border transition-all duration-300 ${
                 tier.featured ? 'md:-translate-y-4' : ''
               }`}
               style={
                 tier.featured
-                  ? { background: '#2B3B2A', boxShadow: '0 24px 60px rgba(43,59,42,0.35)' }
-                  : { background: '#ffffff', boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }
+                  ? {
+                      background: 'linear-gradient(135deg, #7B61FF 0%, #5B3FFF 100%)',
+                      borderColor: 'rgba(123,97,255,0.6)',
+                      boxShadow: '0 24px 60px rgba(123,97,255,0.35)',
+                    }
+                  : {
+                      background: 'rgba(255,255,255,0.04)',
+                      borderColor: 'rgba(255,255,255,0.08)',
+                    }
               }
             >
               {/* Badge */}
               {tier.badge && (
-                <div
-                  className="absolute -top-3.5 left-1/2 -translate-x-1/2 text-white text-xs font-bold px-4 py-1.5 rounded-full tracking-widest"
-                  style={{ background: '#C4622D' }}
-                >
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-plasma text-xs font-bold px-4 py-1.5 rounded-full tracking-widest shadow-lg">
                   {tier.badge}
                 </div>
               )}
 
               {/* Name + minutes */}
               <div className="mb-6">
-                <h3
-                  className="text-xl font-bold mb-1"
-                  style={{ color: tier.featured ? '#ffffff' : '#1a1208' }}
-                >
-                  {tier.name}
-                </h3>
-                <p
-                  className="text-xs font-mono"
-                  style={{ color: tier.featured ? 'rgba(255,255,255,0.5)' : '#9ca3af' }}
-                >
+                <h3 className="text-xl font-bold text-white mb-1">{tier.name}</h3>
+                <p className="text-xs mono-text" style={{ color: 'rgba(255,255,255,0.45)' }}>
                   {tier.minutes}
                 </p>
               </div>
 
               {/* Price */}
-              <div className="mb-8 pb-8 border-b"
-                style={{ borderColor: tier.featured ? 'rgba(255,255,255,0.12)' : '#f0ebe0' }}>
-                <span
-                  className="text-5xl font-bold"
-                  style={{ color: tier.featured ? '#ffffff' : '#1a1208' }}
-                >
-                  {tier.price}
-                </span>
-                <span
-                  className="text-sm ml-1"
-                  style={{ color: tier.featured ? 'rgba(255,255,255,0.45)' : '#9ca3af' }}
-                >
+              <div className="mb-8 pb-8 border-b" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
+                <span className="text-5xl font-bold text-white">{tier.price}</span>
+                <span className="text-sm ml-1" style={{ color: 'rgba(255,255,255,0.4)' }}>
                   {tier.period}
                 </span>
               </div>
@@ -158,14 +152,9 @@ export default function Pricing() {
               <ul className="space-y-3 mb-10 flex-1">
                 {tier.features.map((f) => (
                   <li key={f} className="flex items-center gap-3 text-sm">
-                    <Check
-                      size={14}
-                      className="shrink-0"
-                      style={{ color: tier.featured ? '#7EC87A' : '#10b981' }}
-                    />
-                    <span style={{ color: tier.featured ? 'rgba(255,255,255,0.8)' : '#4b5563' }}>
-                      {f}
-                    </span>
+                    <Check size={14} className="shrink-0"
+                      style={{ color: tier.featured ? '#a5f3a0' : '#7B61FF' }} />
+                    <span style={{ color: 'rgba(255,255,255,0.75)' }}>{f}</span>
                   </li>
                 ))}
               </ul>
@@ -175,18 +164,12 @@ export default function Pricing() {
                 href={CAL_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center py-3.5 rounded-full text-sm font-bold transition-all duration-200"
+                className="block text-center py-3.5 rounded-full text-sm font-bold transition-all duration-200 hover:opacity-90"
                 style={
                   tier.featured
-                    ? { background: '#C4622D', color: '#ffffff' }
-                    : { background: '#1a1208', color: '#ffffff' }
+                    ? { background: '#ffffff', color: '#7B61FF' }
+                    : { background: 'rgba(123,97,255,0.2)', color: '#ffffff', border: '1px solid rgba(123,97,255,0.4)' }
                 }
-                onMouseEnter={e => {
-                  e.currentTarget.style.opacity = '0.88'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.opacity = '1'
-                }}
               >
                 {tier.cta}
               </a>
