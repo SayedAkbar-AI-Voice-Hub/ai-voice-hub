@@ -44,7 +44,7 @@ const sections = [
       },
       {
         subtitle: 'Account Security',
-        text: 'You are responsible for all activity that occurs under your account. Notify us immediately at hello@aivoicehub.com if you suspect unauthorized use of your account.',
+        text: 'You are responsible for all activity that occurs under your account. Notify us immediately at sayedakbar@aivoicehub.site if you suspect unauthorized use of your account.',
       },
     ],
   },
@@ -174,7 +174,7 @@ const sections = [
     content: [
       {
         subtitle: 'Questions',
-        text: 'If you have any questions about these Terms of Service, please contact us at hello@aivoicehub.com or call us directly. We are happy to clarify any aspect of these terms.',
+        text: 'If you have any questions about these Terms of Service, please contact us at sayedakbar@aivoicehub.site or call us directly. We are happy to clarify any aspect of these terms.',
       },
     ],
   },

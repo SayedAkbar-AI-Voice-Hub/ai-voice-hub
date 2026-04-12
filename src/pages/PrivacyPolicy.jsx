@@ -131,7 +131,7 @@ const sections = [
     content: [
       {
         subtitle: 'Questions',
-        text: 'If you have questions or concerns about this Privacy Policy or our data practices, please contact us at hello@aivoicehub.com or by calling us directly.',
+        text: 'If you have questions or concerns about this Privacy Policy or our data practices, please contact us at sayedakbar@aivoicehub.site or by calling us directly.',
       },
     ],
   },

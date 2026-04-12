@@ -85,7 +85,9 @@ export default function Footer() {
             <div className="space-y-2 text-white/30 text-xs">
               <div className="flex items-center gap-1.5">
                 <Mail size={11} />
-                <span>hello@aivoicehub.com</span>
+                <a href="mailto:sayedakbar@aivoicehub.site" className="hover:text-white/60 transition-colors">
+                  sayedakbar@aivoicehub.site
+                </a>
               </div>
             </div>
           </div>
