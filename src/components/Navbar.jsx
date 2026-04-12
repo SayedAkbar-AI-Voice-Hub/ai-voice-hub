@@ -100,7 +100,7 @@ export default function Navbar() {
               onMouseLeave={handleMouseLeave}
               className="magnetic-btn btn-glow btn-primary text-sm font-semibold px-4 py-2 rounded-full transition-colors duration-200"
             >
-              Book a Demo
+              Start Free Trial
             </a>
           </div>
 

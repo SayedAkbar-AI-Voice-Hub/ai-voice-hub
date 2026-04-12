@@ -192,17 +192,18 @@ function Hero() {
               Your AI receptionist answers every call, qualifies leads, books appointments, and follows up — 24 hours a day, 7 days a week.
             </p>
 
-            <div className="hero-element flex flex-wrap items-center gap-4 mb-10">
-              <a href={PHONE_HREF}
+            <div className="hero-element flex flex-wrap items-center gap-4 mb-4">
+              <a href="https://cal.com/sayed-akbar-ai-voice-hub/book-your-ai-voice-agent-subscription-call"
+                target="_blank" rel="noopener noreferrer"
                 className="magnetic-btn btn-glow btn-primary px-8 py-4 rounded-full text-lg flex items-center gap-2 transition-all font-bold">
-                <Phone size={20} />
-                Try the AI Demo
+                Start Free Trial
               </a>
               <button onClick={() => scrollTo('how-it-works')}
                 className="px-8 py-4 rounded-full border-2 border-gray-200 bg-white text-gray-600 hover:text-ghost hover:border-gray-400 font-semibold text-lg transition-all duration-200 flex items-center gap-2 lift-hover">
                 See How It Works <ArrowRight size={18} />
               </button>
             </div>
+            <p className="hero-element text-sm text-gray-400 mb-6">14-day free trial · No credit card required · Live in 48 hours</p>
 
             <div className="hero-phone-badge inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 text-sm shadow-sm">
               <span className="relative flex h-2 w-2">

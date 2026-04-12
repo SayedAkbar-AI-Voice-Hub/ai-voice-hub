@@ -79,15 +79,17 @@ export default function Footer() {
               Get Started
             </h4>
             <p className="text-white/50 text-sm mb-4">
-              Experience our AI in action. Call right now — it's live, 24/7.
+              14-day free trial. No credit card required. Live in 48 hours.
             </p>
             <a
-              href={PHONE_HREF}
-              className="inline-flex items-center gap-2 btn-primary btn-glow font-semibold px-5 py-2.5 rounded-full text-sm transition-all duration-200 mb-6"
+              href="https://cal.com/sayed-akbar-ai-voice-hub/book-your-ai-voice-agent-subscription-call"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 btn-primary btn-glow font-semibold px-5 py-2.5 rounded-full text-sm transition-all duration-200 mb-2"
             >
-              <Phone size={14} />
-              Try the Demo
+              Start Free Trial
             </a>
+            <p className="text-white/25 text-xs mb-4">14 days free · no card needed</p>
             <div className="space-y-2 text-white/30 text-xs">
               <div className="flex items-center gap-1.5">
                 <Mail size={11} />

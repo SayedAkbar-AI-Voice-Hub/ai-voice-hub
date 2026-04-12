@@ -21,7 +21,7 @@ const tiers = [
       'Standard Voices',
       'Setup Fee: $200',
     ],
-    cta: 'Start Essential',
+    cta: 'Start Free Trial',
     featured: false,
   },
   {
@@ -38,7 +38,7 @@ const tiers = [
       'Priority Support',
       'Setup Fee: $500',
     ],
-    cta: 'Deploy Now',
+    cta: 'Start Free Trial',
     featured: true,
     badge: 'RECOMMENDED',
   },
@@ -56,7 +56,7 @@ const tiers = [
       'Dedicated Manager',
       'Setup Fee: $1,000',
     ],
-    cta: 'Contact Sales',
+    cta: 'Start Free Trial',
     featured: false,
   },
 ]
@@ -95,8 +95,16 @@ export default function Pricing() {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-white/70 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 text-white/70 text-sm font-medium mb-4">
             Membership Tiers
+          </div>
+          {/* Free trial badge */}
+          <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-400/40 rounded-full px-5 py-2 text-emerald-300 text-sm font-semibold mb-6">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+            </span>
+            14-Day Free Trial — No Credit Card Required
           </div>
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight tracking-tight">
             Scale without{' '}
@@ -176,6 +184,9 @@ export default function Pricing() {
               >
                 {tier.cta}
               </a>
+              <p className="text-center text-xs mt-3" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                14-day free trial · No credit card required
+              </p>
             </div>
           ))}
         </div>
