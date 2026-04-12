@@ -119,7 +119,7 @@ function HeroCallCard() {
         <div className="space-y-1.5">
           {[
             { label: 'Appointment booked — Thu 2:00 PM', cls: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
-            { label: 'CRM record created in HubSpot', cls: 'bg-blue-50 text-blue-700 border-blue-200' },
+            { label: 'CRM record created in GoHighLevel', cls: 'bg-blue-50 text-blue-700 border-blue-200' },
             { label: 'SMS confirmation queued', cls: 'bg-purple-50 text-purple-700 border-purple-200' },
           ].map((a, i) => (
             <div key={i} className={`flex items-center gap-2 text-[11px] font-semibold px-3 py-2 rounded-xl border ${a.cls}`}>
@@ -386,7 +386,7 @@ function Features() {
   }, [])
 
   const [typed, setTyped] = useState('')
-  const typeText = "> Call connected.\n> Extracting CRM payload...\n> Client details verified.\n> Updating HubSpot pipeline...\n> Sequence initialized."
+  const typeText = "> Call connected.\n> Extracting CRM payload...\n> Client details verified.\n> Updating GoHighLevel pipeline...\n> Sequence initialized."
   useEffect(() => {
     let i = 0, current = '';
     const interval = setInterval(() => {
@@ -463,7 +463,7 @@ function Features() {
                 <Database size={20} className="text-blue-600" />
               </div>
               <h3 className="font-bold text-xl text-ghost mb-2">CRM Integration</h3>
-              <p className="text-sm text-gray-500 mb-4">Every conversation logged synced to HubSpot, Salesforce, or GHL automatically.</p>
+              <p className="text-sm text-gray-500 mb-4">Every conversation logged and synced to GoHighLevel automatically.</p>
             </div>
             <div className="bg-gray-900 rounded-xl p-4 flex-1 border border-gray-700 overflow-hidden">
               <pre className="mono-text text-xs text-emerald-400 whitespace-pre-wrap leading-relaxed">
