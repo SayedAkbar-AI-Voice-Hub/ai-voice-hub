@@ -13,7 +13,7 @@ export default function Footer() {
         background: 'linear-gradient(160deg, #07030F 0%, #050210 60%, #060A16 100%)',
         borderTop: '1px solid rgba(123,97,255,0.18)',
       }}
-      className="rounded-t-[3rem] mt-0 overflow-hidden"
+      className="mt-0"
     >
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
