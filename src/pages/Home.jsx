@@ -679,6 +679,7 @@ export default function Home() {
     <div className="min-h-screen bg-void w-full">
       <Navbar />
       <Hero />
+      <DemoCallCTA />
       <Protocol />
       <Features />
       <Industries />
