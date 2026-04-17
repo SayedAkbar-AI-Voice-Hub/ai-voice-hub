@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import RealEstate from './pages/services/RealEstate'
 import Dental from './pages/services/Dental'
-import AutoDealerships from './pages/services/AutoDealerships'
-import Construction from './pages/services/Construction'
+import Barbershops from './pages/services/Barbershops'
+import OtherLocalBusinesses from './pages/services/Construction'
 import HVAC from './pages/services/HVAC'
 import Plumbing from './pages/services/Plumbing'
 import Landscaping from './pages/services/Landscaping'
@@ -26,8 +26,8 @@ export default function App() {
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/services/real-estate" element={<RealEstate />} />
         <Route path="/services/dental" element={<Dental />} />
-        <Route path="/services/auto-dealerships" element={<AutoDealerships />} />
-        <Route path="/services/construction" element={<Construction />} />
+        <Route path="/services/barbershops" element={<Barbershops />} />
+        <Route path="/services/other-local-businesses" element={<OtherLocalBusinesses />} />
         <Route path="/services/hvac" element={<HVAC />} />
         <Route path="/services/plumbing" element={<Plumbing />} />
         <Route path="/services/landscaping" element={<Landscaping />} />
