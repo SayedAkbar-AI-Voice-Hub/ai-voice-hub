@@ -294,7 +294,7 @@ function Protocol() {
           },
           scale: 0.92,
           opacity: 0.4,
-          filter: 'blur(8px)'
+          force3D: true,
         })
       })
     }, ref)
@@ -318,14 +318,14 @@ function Protocol() {
 
       <div id="protocol-container" className="relative">
         {steps.map((step, i) => (
-          <div key={i} className="prot-card h-screen w-full flex items-center justify-center top-0 px-6">
+          <div key={i} className="prot-card h-screen w-full flex items-center justify-center top-0 px-6" style={{ willChange: 'transform, opacity' }}>
             <div className={`w-full max-w-5xl h-[70vh] bg-white border-2 ${step.lightColor} rounded-[3rem] p-12 flex flex-col md:flex-row items-center gap-12 shadow-2xl relative overflow-hidden`}>
 
               {/* Visual abstraction */}
               <div className={`flex-1 w-full h-full ${step.lightColor} border rounded-[2rem] relative flex items-center justify-center overflow-hidden`}>
                 {i === 0 && (
                   <div className="relative flex items-center justify-center w-40 h-40">
-                    <div className="absolute inset-0 rounded-full border-4 border-purple-300 opacity-30 animate-ping" />
+                    <div className="absolute inset-0 rounded-full border-4 border-purple-300 opacity-30 animate-pulse" />
                     <div className="absolute inset-4 rounded-full border-2 border-purple-400 opacity-40 animate-pulse" />
                     <div className={`w-20 h-20 rounded-full bg-gradient-to-br ${step.color} flex items-center justify-center shadow-xl`}>
                       <Phone size={32} className="text-white" />
